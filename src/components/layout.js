@@ -218,7 +218,7 @@ function Layout({ children }) {
                     <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                       <div className="w-full pt-6 text-3xl text-blue-700 font-bold text-center">€ 30</div>
                       <div className="flex items-center justify-center">
-                        <a className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg" href="#contact">Book</a>
+                        <a className="mx-auto lg:mx-0 hover:bg-blue-700 bg-blue-800 text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg" href="#contact">Book</a>
                       </div>
                     </div>
                   </div>
@@ -237,7 +237,7 @@ function Layout({ children }) {
                     <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                       <div className="w-full pt-6 text-4xl text-blue-700 font-bold text-center">€ 120</div>
                       <div className="flex items-center justify-center">
-                        <a className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg" href="#contact">Book</a>
+                        <a className="mx-auto lg:mx-0 hover:bg-blue-700 bg-blue-800 text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg" href="#contact">Book</a>
                       </div>
                     </div>
                   </div>
@@ -254,7 +254,7 @@ function Layout({ children }) {
                     <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                       <div className="w-full pt-6 text-3xl text-blue-700 font-bold text-center">€ 240</div>
                       <div className="flex items-center justify-center">
-                        <a className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg" href="#contact">Book</a>
+                        <a className="mx-auto lg:mx-0 hover:bg-blue-700 bg-blue-800 text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg" href="#contact">Book</a>
                       </div>
                     </div>
                   </div>
@@ -378,7 +378,7 @@ function Layout({ children }) {
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="contact" />
                 
-                <div className="w-full sm:w-2/3 md:w-2/3 lg:w-1/2 mx-auto px-6 text-left my-2 text-2xl leading-tight">
+                <div className="w-full sm:w-2/3 md:w-2/3 lg:w-1/2 mx-auto px-6 text-left my-2 text-xl sm:text-2xl leading-tight">
 
                   <label className="block">
                     <span className="text-white font-semibold">Name</span>
