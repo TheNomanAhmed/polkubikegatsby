@@ -370,7 +370,7 @@ function Layout({ children }) {
               <h3 className="my-4 text-md sm:text-xl text-gray-400 leading-tight">Fill out the form and we will contact you</h3>	
 
               <form
-                name="contact-form"
+                name="contact"
                 method="post"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
@@ -416,12 +416,11 @@ function Layout({ children }) {
                     <span class="font-semibold">Pick up Date</span>
                     <input name="date" type="date" class="text-gray-900 font-semibold form-input mt-1 block w-full mt-3" placeholder="Enter the date"/>
                   </label>
+                </div>
 
                   <button type="submit"
                         className="mx-auto text-xl lg:mx-0 hover:bg-blue-400 bg-white text-gray-800 font-semibold rounded-full my-6 py-2 px-6 shadow-lg">Submit
                   </button>
-
-                </div>
 
                 </form>
 
