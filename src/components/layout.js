@@ -394,11 +394,11 @@ function Layout({ children }) {
                     <span className="text-white font-semibold">Bike Type</span>
                     <div className="mt-3">
                       <label className="inline-flex items-center">
-                        <input type="radio" className="form-radio" name="accountType" value="personal"/>
+                        <input type="radio" className="form-radio" name="BikeType" value="Girls Bike"/>
                         <span className="ml-4">Girls</span>
                       </label>
                       <label className="inline-flex items-center ml-8">
-                        <input type="radio" className="form-radio" name="accountType" value="busines"/>
+                        <input type="radio" className="form-radio" name="BikeType" value="Boys Bike"/>
                         <span className="ml-2">Boys</span>
                       </label>
                     </div>
@@ -406,12 +406,35 @@ function Layout({ children }) {
 
                   <label class="block mt-6">
                     <span class="font-semibold">Select Plan</span>
-                    <select class="text-gray-900 font-semibold form-select mt-2 block w-full">
-                      <option>1 Month €30</option>
-                      <option>5 Months €120</option>
+                    <div class="mt-2">
+                      <div>
+                        <label class="inline-flex items-center">
+                          <input type="radio" class="form-radio text-indigo-600" name="Pricing" value="1 Month"/>
+                          <span class="ml-2">€30 for 1 Month </span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="inline-flex items-center mt-2">
+                          <input type="radio" class="form-radio text-green-500" name="Pricing" value="5 Months"/>
+                          <span class="ml-2">€120 for 5 Months </span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="inline-flex items-center mt-2">
+                          <input type="radio" class="form-radio text-pink-600" name="Pricing" value="Yearly"/>
+                          <span class="ml-2">€240 for Yearly </span>
+                        </label>
+                      </div>
+                    </div>
+
+                    {/* <select class="text-gray-900 font-semibold form-select mt-2 block w-full" name="Pricing" >
+                      <option value="1 Month">1 Month €30</option>
+                      <option value="Girls Bike">5 Months €120</option>
                       <option>Yearly €240</option>
-                    </select>
+                    </select> */}
+
                   </label>
+
                   <label class="block mt-6">
                     <span class="font-semibold">Pick up Date</span>
                     <input name="date" type="date" class="text-gray-900 font-semibold form-input mt-1 block w-full mt-3" placeholder="Enter the date"/>
