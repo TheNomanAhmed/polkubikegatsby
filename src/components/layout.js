@@ -48,8 +48,8 @@ function Layout({ children }) {
                     FAQs
                   </AnchorLink>
                 </div>
-                <div className="hidden md:block">
-                <button type="submit" className="mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full gradient my-4 py-2 px-8 ">Book a Bike </button>
+                <div className="hidden my-6 md:block">
+                <a className="mx-auto lg:mx-0 hover:bg-blue-700 text-white font-bold rounded-full bg-blue-800 py-3 px-4" href="#contact">Book a Bike </a>
                 </div>
               </div>
             </div>
@@ -117,9 +117,9 @@ function Layout({ children }) {
                   around the city.
                   </p>
 
-                  <form action={data.site.siteMetadata.github}>
-                    <button type="submit" className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-0 sm:my-4 py-4 px-8 shadow-lg">Book a Bike </button>
-                  </form>
+                  <div className="flex z-40">
+                        <a className="mx-auto lg:mx-0 hover:bg-blue-400 bg-white text-gray-800 font-bold rounded-full mb-6 py-4 px-8 shadow-lg" href="#contact">Book a Bike</a>
+                  </div>
 
                 </div>
 
@@ -218,7 +218,7 @@ function Layout({ children }) {
                     <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                       <div className="w-full pt-6 text-3xl text-blue-700 font-bold text-center">€ 30</div>
                       <div className="flex items-center justify-center">
-                        <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Sign Up</button>
+                        <a className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg" href="#contact">Book</a>
                       </div>
                     </div>
                   </div>
@@ -237,7 +237,7 @@ function Layout({ children }) {
                     <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                       <div className="w-full pt-6 text-4xl text-blue-700 font-bold text-center">€ 120</div>
                       <div className="flex items-center justify-center">
-                        <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Sign Up</button>
+                        <a className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg" href="#contact">Book</a>
                       </div>
                     </div>
                   </div>
@@ -254,7 +254,7 @@ function Layout({ children }) {
                     <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                       <div className="w-full pt-6 text-3xl text-blue-700 font-bold text-center">€ 240</div>
                       <div className="flex items-center justify-center">
-                        <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Sign Up</button>
+                        <a className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg" href="#contact">Book</a>
                       </div>
                     </div>
                   </div>
@@ -268,7 +268,10 @@ function Layout({ children }) {
 
 
             {/* Title cards */}
-            <section className="bg-white border-b py-8">
+
+
+
+            {/* <section className="bg-white border-b py-8">
               
               <div className="container mx-auto flex flex-wrap pt-4 pb-12">
               
@@ -335,11 +338,11 @@ function Layout({ children }) {
                 
               </div>
 
-            </section>
+            </section> */}
 
 
             {/* Waves SVG */}
-            <svg className="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <svg className="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" id="contact">
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
                   <g className="wave" fill="#f8fafc">
@@ -357,14 +360,14 @@ function Layout({ children }) {
             </svg>
 
             {/* CTA block */}
-            <section className="container mx-auto text-center py-6 my-20" id="contact">
+            <section className="container mx-auto text-center mt-20 md:py-3 md:mb-5 md:mt-0">
 
               <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-white">Contact Us</h1>
               <div className="w-full mb-4">	
                 <div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
               </div>
 
-              <h3 className="my-4 text-xl text-gray-400 leading-tight">Fill out the form and we will contact you</h3>	
+              <h3 className="my-4 text-md sm:text-xl text-gray-400 leading-tight">Fill out the form and we will contact you</h3>	
 
               <form
                 name="contact-form"
@@ -372,12 +375,19 @@ function Layout({ children }) {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
+                <input type="hidden" name="bot-field" />
+                <input type="hidden" name="form-name" value="contact" />
                 
                 <div className="w-full sm:w-2/3 md:w-2/3 lg:w-1/2 mx-auto px-6 text-left my-2 text-2xl leading-tight">
 
                   <label className="block">
                     <span className="text-white font-semibold">Name</span>
-                    <input className="form-input mt-2 block w-full text-gray-900 font-medium" placeholder="Jane Doe"/>
+                    <input name="name" className="form-input mt-2 block w-full text-gray-900 font-medium" placeholder="Jane Doe"/>
+                  </label>
+                  
+                  <label className="block mt-6">
+                    <span className="text-white font-semibold">Email</span>
+                    <input name="email" className="form-input mt-2 block w-full text-gray-900 font-medium" placeholder="Email@email.com"/>
                   </label>
 
                   <div className="mt-6">
@@ -404,11 +414,11 @@ function Layout({ children }) {
                   </label>
                   <label class="block mt-6">
                     <span class="font-semibold">Pick up Date</span>
-                    <input type="date" class="text-gray-900 font-semibold form-input mt-1 block w-full mt-3" placeholder="Enter the date"/>
+                    <input name="date" type="date" class="text-gray-900 font-semibold form-input mt-1 block w-full mt-3" placeholder="Enter the date"/>
                   </label>
 
                   <button type="submit"
-                        className="mx-auto lg:mx-0 hover:bg-blue-400 bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">Submit
+                        className="mx-auto text-xl lg:mx-0 hover:bg-blue-400 bg-white text-gray-800 font-semibold rounded-full my-6 py-2 px-6 shadow-lg">Submit
                   </button>
 
                 </div>
@@ -425,11 +435,8 @@ function Layout({ children }) {
                     
                   <div className="flex-1 mb-6">
                   
-                    <a className="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
-                      <svg className="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
-                      <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" fill="rgb(0,0,0)" />
-                      <path className="plane-take-off" d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "/>
-                      </svg> LANDING
+                    <a className="text-blue-800 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
+                      POLKUBIKE
                     </a>
                   </div>
                 
