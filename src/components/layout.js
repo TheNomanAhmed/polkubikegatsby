@@ -25,7 +25,10 @@ function Layout({ children }) {
             <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto w-full px-5 py-4 md:py-0">
               <div className="flex items-center text-2xl">
                 <div className="text-gray-800 mr-2">
-                  <a className="toggleColour no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-blue-800">
+                  <a
+                    className="toggleColour no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-blue-800"
+                    href="#"
+                  >
                     POLKUBIKE
                   </a>
                 </div>
@@ -45,15 +48,15 @@ function Layout({ children }) {
                 </AnchorLink>
                 <AnchorLink
                   className="px-2 sm:px-4 hover:text-blue-900"
-                  href="#contact"
-                >
-                  Contact Us
-                </AnchorLink>
-                <AnchorLink
-                  className="px-2 sm:px-4 hover:text-blue-900"
                   href="#faq"
                 >
                   FAQs
+                </AnchorLink>
+                <AnchorLink
+                  className="px-2 sm:px-4 hover:text-blue-900"
+                  href="#contact"
+                >
+                  Contact Us
                 </AnchorLink>
               </div>
               <div className="hidden my-6 md:block">
@@ -338,76 +341,126 @@ function Layout({ children }) {
             </div>
           </section>
 
-          {/* Title cards */}
+          {/* FAQs */}
 
-          {/* <section className="bg-white border-b py-8">
-              
-              <div className="container mx-auto flex flex-wrap pt-4 pb-12">
-              
-                <h3 className="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800">Bike Pictures</h3>
-                <div className="w-full mb-4">	
-                  <div className="h-1 mx-auto gradient w-64 my-0 py-0 rounded-t"></div>
-                </div>
-              
-                <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-                  <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                    <a href="https://www.gatsbyjs.org/" className="flex flex-wrap no-underline hover:no-underline">
-                      <p className="w-full text-gray-600 text-xs md:text-sm px-6">Blazing Fast</p>
-                      <div className="w-full font-bold text-xl text-gray-800 px-6">Static Progressive Web App</div>
-                      <p className="text-gray-800 text-base px-6 mb-5">
-                        Why Gatsby? Gatsby is a static PWA (Progressive Web App) generator. Gatsby loads only the critical HTML, CSS, data, and JavaScript so your site loads as fast as possible. 
-                      </p>
-                    </a>
-                  </div>
-                  <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                    <div className="flex items-center justify-start">
-                      <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Action</button>
-                    </div>
-                  </div>
-                </div>
-                
-                
-                
-                <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-                  <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                    <a href="https://tailwindcss.com/" className="flex flex-wrap no-underline hover:no-underline">
-                      <p className="w-full text-gray-600 text-xs md:text-sm px-6">Tailwind is different</p>
-                      <div className="w-full font-bold text-xl text-gray-800 px-6">State-of-the-art CSS Framework</div>
-                      <p className="text-gray-800 text-base px-6 mb-5">
-                        Instead of opinionated predesigned components, Tailwind provides low-level utility classes that let you build completely custom designs without ever leaving your HTML.
-                      </p>
-                    </a>
-                  </div>
-                  <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                    <div className="flex items-center justify-center">
-                      <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Action</button>
-                    </div>
-                  </div>
-                </div>
-                
-                
-                
-                <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-                  <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                    <a href="#" className="flex flex-wrap no-underline hover:no-underline">
-                      <p className="w-full text-gray-600 text-xs md:text-sm px-6">Open-Source</p>
-                      <div className="w-full font-bold text-xl text-gray-800 px-6">Coded by <a href="https://twitter.com/Sm0keDev">Sm0ke</a> </div>
-                      <p className="text-gray-800 text-base px-6 mb-5">
-                        The source code is released under a license in which the copyright holder grants users the rights to study, change, and distribute the software to anyone and for any purpose.
-                      </p>
-                    </a>
-                  </div>
-                  <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                    <div className="flex items-center justify-end">
-                      <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Action</button>
-                    </div>
-                  </div>
-                </div>
-                
-                
+          <section className="bg-white border-b pb-10 pt-16" id="faq">
+            <div className="container mx-auto flex flex-wrap pt-4 pb-12">
+              <h3 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+                FAQs
+              </h3>
+              <div className="w-full mb-4">
+                <div className="h-1 mx-auto gradient w-64 my-0 py-0 rounded-t"></div>
               </div>
 
-            </section> */}
+              <div className="w-full md:w-1/2 p-2 flex flex-col flex-grow flex-shrink">
+                <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                  <div className="w-full font-bold text-xl text-gray-800 px-6 pt-4">
+                    When and where can I pick up my bike?
+                  </div>
+                  <p className="text-gray-800 text-base px-6 mb-5">
+                    You can pick up your bike at parking space of both
+                    universities. We are open 7 days a week from 9:00 – 18:00.
+                    See the contact page for a map with the exact location.
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-full md:w-1/2 p-2 flex flex-col flex-grow flex-shrink">
+                <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                  <div className="w-full font-bold text-xl text-gray-800 px-6 pt-4">
+                    When and where do I return my bike?
+                  </div>
+                  <p className="text-gray-800 text-base px-6 mb-5">
+                    The rental period starts from the day you pick up the bike.
+                    The bike has to be returned before the due date. It’s always
+                    possible to extend the rent.
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-full md:w-1/2 p-2 flex flex-col flex-grow flex-shrink">
+                <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                  <div className="w-full font-bold text-xl text-gray-800 px-6 pt-4">
+                    How do I pay for my bike?
+                  </div>
+                  <p className="text-gray-800 text-base px-6 mb-5">
+                    The rental fee has to be paid upfront (in cash or by card)
+                    when you pick up your bike. The rent is 30 euro per month
+                    with a minimum of 3 months. A full year is 250 euro.
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-full md:w-1/2 p-2 flex flex-col flex-grow flex-shrink">
+                <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                  <div className="w-full font-bold text-xl text-gray-800 px-6 pt-4">
+                    What maintenance and repairs is covered?
+                  </div>
+                  <p className="text-gray-800 text-base px-6 mb-5">
+                    All maintenance and repairs due to normal use of the bike is
+                    covered. Damage caused due to crash or neglect will be
+                    charged for.
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-full md:w-1/2 p-2 flex flex-col flex-grow flex-shrink">
+                <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                  <div className="w-full font-bold text-xl text-gray-800 px-6 pt-4">
+                    Where should I go for maintenance and repairs?
+                  </div>
+                  <p className="text-gray-800 text-base px-6 mb-5">
+                    If your bike needs maintenance or repairs you can contact us
+                    and we will take care of it immediately or give you a
+                    replacement bike. You can also go to another bike repair
+                    shop but that will be at your own costs.
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-full md:w-1/2 p-2 flex flex-col flex-grow flex-shrink">
+                <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                  <div className="w-full font-bold text-xl text-gray-800 px-6 pt-4">
+                    What happens when my bike gets stolen?
+                  </div>
+                  <p className="text-gray-800 text-base px-6 mb-5">
+                    In case your bike got stolen you have to bring the keys of
+                    the bike and a police report. A deductible of 70 euro per
+                    case is applicable. If you can’t show the keys and a police
+                    report you will be charged 100 euro replacement costs. More
+                    information about how to safely park your bike and what to
+                    do in case of theft will be explained to you when you pick
+                    up your bike.
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-full md:w-1/2 p-2 flex flex-col flex-grow flex-shrink">
+                <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                  <div className="w-full font-bold text-xl text-gray-800 px-6 pt-4">
+                    What if I lose my bike keys?
+                  </div>
+                  <p className="text-gray-800 text-base px-6 mb-5">
+                    Please contact us and pick up a spare key in case you have
+                    lost your keys. The replacement costs are 7,50 euro per key.
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-full md:w-1/2 p-2 flex flex-col flex-grow flex-shrink">
+                <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                  <div className="w-full font-bold text-xl text-gray-800 px-6 pt-4">
+                    Can I rent a bike shorter than three months?
+                  </div>
+                  <p className="text-gray-800 text-base px-6 mb-5">
+                    Yes it’s possible to rent a bike for shorter periods but the
+                    price for 1-3 months is the same. The rent for one week is
+                    30 euro, the second week 20 euro and the third week 10 euro.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* Waves SVG */}
           <svg
@@ -562,6 +615,18 @@ function Layout({ children }) {
                     type="date"
                     class="text-gray-900 font-semibold form-input mt-1 block w-full mt-3"
                     placeholder="Enter the date"
+                    value="Pick up date"
+                  />
+                </label>
+
+                <label class="block mt-6">
+                  <span class="font-semibold">Return Date</span>
+                  <input
+                    name="date"
+                    type="date"
+                    class="text-gray-900 font-semibold form-input mt-1 block w-full mt-3"
+                    placeholder="Enter the date"
+                    value="Return date"
                   />
                 </label>
               </div>
