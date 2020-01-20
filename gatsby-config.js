@@ -1,13 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `TailwindPlay`,
-    description: `GatsbyJS Starter styled with Tailwind CSS`,
-    author: `@Sm0keDev`,
-    github: `https://github.com/app-generator/gatsbyjs-starter-tailwindplay`,
-    blog: `https://blog.appseed.us/tag/gatsbyjs`,
-    product: `https://appseed.us/apps/gatsbyjs`,
-    docs: `https://docs.appseed.us/apps/gatsbyjs`
-
+    title: `Polku Bike`,
+    description: `Drive your Bike whenever and wherever you Like`,
+    author: `@TheNomanAhmed`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,6 +18,7 @@ module.exports = {
         icon: `src/images/tailwind-icon.png`
       }
     },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-postcss`,
     {
       resolve: "gatsby-plugin-purgecss",
